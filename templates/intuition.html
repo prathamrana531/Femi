@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="intuition.css">
+  <title>Intuition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='intuition.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='media.css') }}">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="navpart1">
+      <img src="{{url_for('static', filename='images/test.svg')}}"  alt="" srcset="" class="logo" />
+    </div>
+    <div class="navpart2">
+      <div class="home"><a href={{url_for('home')}} style="text-decoration: none">Home</a></div>
+           <div class="intuition"><a href={{url_for('intuition')}} style="text-decoration: none">Intuition</a></div>
+           <div class="team"><a href={{url_for('team')}} style="text-decoration: none">Team</a></div>
+           <div class="team"><a href={{url_for('log')}} style="text-decoration: none">Log Out</a></div>
+          </div>
+  </div>
+  <div class="video">
+    <video loop autoplay>
+      <source src="{{url_for('static', filename='images/video.mp4')}}" type="video/mp4">
+    </video>
+    <div class="head">The Story</div>
+    <div class="content">Every solution starts with identification of a problem. Want to know how
+      we came up with this? Read on.</div>
+
+  </div>
+<div class="bigwrapper">
+  <div class="div1">
+    <div class="heading">Why did we start this project?</div>
+    <div class="wrapper">
+      <div class="content">When technology started to exist, it did because of one commmon goal -
+        Technology for the greater good. Since childhood, we are being taught
+        the principles of sustainable development and ways we can
+        revolutionise the world and take care of our planet.</div>
+      <img src="https://eatkind.net/wp-content/uploads/2017/01/Barley.jpg" alt="" srcset="" class="image">
+    </div>
+
+  </div>
+  <div class="div2">
+    <div class="heading">How did we implement our idea?</div>
+    <div class="wrapper">
+      <div class="content">We used a CNN model to detect the soil present in the image uploaded
+        by the farmer and according to the soil suggest the best crops. We
+        used flask to integrate the model into our website.</div>
+      <img src="https://www.natrue.org/uploads/2020/07/gardeneres-crop-800x560px.jpg" alt="" srcset="" class="image">
+    </div>
+
+  </div>
+  <div class="div3">
+    <div class="heading">Did we face any challenges?</div>
+    <div class="wrapper">
+      <div class="content">Identification of the correct model and training and testing it with a
+        machine of the bare minimum power took us a little longer than usual.</div>
+      <img src="https://i0.wp.com/zobuz.com/wp-content/uploads/2020/03/featured-image.jpg" alt="" srcset="" class="image">
+    </div>
+
+  </div>
+  <div class="div4">
+    <div class="heading">Who can use this tech?</div>
+    <div class="wrapper">
+      <div class="content">Farmers and even people who wish to have an in-house garden at their
+        place can utilise this software and get the best suggestions for their
+        next produce.</div>
+      <img src="https://media.homeanddecor.com.sg/hnd/blog/2016/12/54718-urban-farming-trend.jpg" alt="" srcset="" class="image">
+    </div>
+  </div>
+
+
+</div>
+</body>
+
+</html>

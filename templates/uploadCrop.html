@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='uploadCrop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='uploadMediaCrop.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Crop Suggestion</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-icon">
+            <img src="{{url_for('static', filename='images/test.svg')}}" alt="" srcset="">
+        </div>
+        <div class="content">
+            <div class="texti">
+                <h1>What kind of crops are best for your land?</h1>
+                <div class="text">The history of Indigo plantation bears testimony to the fact that when the wrong crops were grown for too long on the right land, the land suffered. It is imperative to identify which crop is suitable for your particular land in order to maximise the produce and henceforth the profits from your hard labour. 
+                    Please take the picture in as clearest way as possible.</div>
+            </div>
+            <div class="image img">
+                <img src="{{url_for('static', filename='images/Upload_soil_illustration.png')}}" alt="" srcset="">
+            </div>
+        </div>
+        <div class="upload">
+            <form action="/predictCrop" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+            <label for="uploadImage" class="button">Upload</label>
+            <input type="file" name="image" id="uploadImage" style="display: none;">
+            <input type="submit" value="Predict" class="predict">
+        </form>
+        </div>
+        <div class="home">
+            <div class="returnToHome"><a href={{url_for('home')}} style="text-decoration: none">Return To Home</a></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='soilUpload.js') }}"></script>
+</body>
+</html>

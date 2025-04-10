@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='afterUploadSoil.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='afterUploadSoilMedia.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Soil Detection</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-icon">
+            <img src="{{url_for('static', filename='images/test.svg')}}" alt="" srcset="">
+        </div>
+        <div class="content">
+            <div class="texti">
+                <h1>Here's what we found about your soil type!</h1>
+                <h3>Type: {{soil_type}}</h3>
+                <div class="text">{{desc}}</div>
+            </div>
+            <div class="image">
+                <img src={{user_image_path}} alt="" class="uploadedImage">
+            </div>
+        </div>
+        <div class="upload">
+            <label for="uploadImage" class="button"><a href={{url_for('uploadSoil')}} style="text-decoration: none">Upload Another Image</a></label>
+            <input type="file" name="" id="uploadImage" style="display: none;">
+        </div>
+        <div class="home">
+            <div class="returnToHome"><a href={{url_for('home')}} style="text-decoration: none">Return To Home</a></div>
+        </div>
+    </div>
+</body>
+</html>

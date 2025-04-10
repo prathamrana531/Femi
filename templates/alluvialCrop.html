@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='afterUploadCrop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='afterUploadMediaCrop.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Crop Suggestion</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-icon">
+            <img src="{{url_for('static', filename='images/test.svg')}}" alt="" srcset="">
+        </div>
+        <div class="content">
+            <div class="texti">
+                <h1>Here's the best crop we found!</h1>
+                <h3>Soil: Alluvial</h3>
+                <h3>Crop: Wheat</h3>
+                <div class="text"> Alluvial soil is rich in humus and is loamy in texture.In addition to being rich in minerals, alluvial soils are also highly permeable, which means they allow water to drain through them quickly. This makes them good for growing plants that need plenty of water. Thus it is suitable for growth of wheat and rice.</div>
+            </div>
+            <div class="image">
+                <img src="{{url_for('static', filename='images/amos_wheat.jpg')}}" alt="" class="uploaded">
+            </div>
+        </div>
+        <div class="upload">
+            <label for="uploadImage" class="button"><a href={{url_for('uploadCrop')}} style="text-decoration: none">Upload Another Image</a></label>
+            <input type="file" name="" id="uploadImage" style="display: none;">
+        </div>
+        <div class="home">
+            <div class="returnToHome"><a href={{url_for('home')}} style="text-decoration: none">Return To Home</a></div>
+        </div>
+    </div>
+</body>
+</html>

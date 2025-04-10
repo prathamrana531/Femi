@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='mediaQuery.css') }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <div class="div1">
+      <div class="navbar">
+        <div class="navpart1">
+          <img src= "{{url_for('static', filename='images/test.svg')}}" alt="" srcset="" class="logo" />
+        </div>
+        <div class="navpart2">
+          <div class="home"><a href={{url_for('home')}} style="text-decoration: none">Home</a></div>
+           <div class="intuition"><a href={{url_for('intuition')}} style="text-decoration: none">Intuition</a></div>
+           <div class="team"><a href={{url_for('team')}} style="text-decoration: none">Team</a></div>
+           <div class="team"><a href={{url_for('log')}} style="text-decoration: none">Log Out</a></div>
+        </div>
+      </div>
+      <div class="content">
+        <img
+          src="{{url_for('static', filename='images/Farmer_Ilustration_Combined.png')}}"
+          alt=""
+          srcset=""
+          class="farmer"
+        />
+        <h1>Soil, Crops and Food.</h1>
+        <div class="texti">
+          A technological solution to detect which crop is suitable and most
+          fruitful for your soil type.
+        </div>
+      </div>
+      <img src= "{{url_for('static', filename='images/Leaf1.png')}}" alt="" srcset="" class="leaf1" />
+      <img src="{{url_for('static', filename='images/Leaf2.png')}}" alt="" srcset="" class="leaf2" />
+
+      <div class="opportunities">
+        <h1>Sustainable Development</h1>
+        <div class="texti2">
+          Technology is supposed to be utilised for the greater good and our project aims to cover three vital sustainable development goals.
+        </div>
+      </div>
+      <div class="threeOptions">
+        <div class="option1">
+          <img src="{{url_for('static', filename='images/Icon1.png')}}" alt="" srcset="" />
+          <div class="head">Zero Hunger</div>
+          <div class="content-options">
+            With the knowledge of the right crop for your soil, more crops can be produced thereby <strong>ending hunger</strong>.
+          </div>
+        </div>
+        <div class="option2">
+          <img src="{{url_for('static', filename='images/Icon2.png')}}" alt="" srcset="" />
+          <div class="head">Responsible Consumption and Production</div>
+          <div class="content-options">
+            We detect the correct soil and suggest the best crops which can be grown thereby <strong>ensuring sustainable production patterns</strong>.
+          </div>
+        </div>
+        <div class="option3">
+          <img src="{{url_for('static', filename='images/Icon3.png')}}" alt="" />
+          <div class="head">Life on Land</div>
+          <div class="content-options">
+            When the right crop is being grown on the soil, the soil resources are utilised properly thereby <strong>preventing desertification</strong> and trying to <strong>halt desertification</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div2">
+      <div class="heading">
+        <h3>Soil Detector and  Crop Suggester</h3>
+        <div class="texti3">
+          A machine learning algorithm to detect which  soil lies on your land and suggest you the perfect <br> crop for it. 
+        </div>
+      </div>
+      <div class="features">
+        <div class="feature1">
+          <img
+            src="{{url_for('static', filename='images/Image_1_w_gradient.png')}}"
+            alt=""
+            srcset=""
+            class="featureimg"
+          />
+          <div class="subhead">FEATURE ONE</div>
+          <hr />
+          <div class="head">Check your soil</div>
+          <div class="feature-content">
+            Know the soil that resides on your land.
+          </div>
+
+          <div class="button"><a href={{url_for('uploadSoil')}} style="text-decoration: none">Check Now</a></div>
+        </div>
+        <div class="feature2">
+          <div class="subhead">FEATURE TWO</div>
+          <hr />
+          <div class="head">Suggest a crop</div>
+          <div class="feature-content">
+            Know which crop is perfect to be grown in your soil.
+          </div>
+
+          <div class="button"><a href={{url_for('uploadCrop')}} style="text-decoration: none">Check Now</a></div>
+          <img
+            src="{{url_for('static', filename='images/Image_2_w_gradient.png')}}"
+            alt=""
+            srcset=""
+            class="featureimg"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="div3">
+      <div class="workingImage">
+        <div class="heading">How It Works?</div>
+        <div class="working-content">
+          We used a soil classification dataset with four different types of soil - alluvial, black, clay and red soil
+          which was available on Kaggle. It contains both train and test datasets for the different soil types. We have 5 hidden layers in the model.
+        </div>
+        <div class="common">
+            <div class="chart">
+                <div class="circle">01</div>
+                <hr />
+                <div class="circle">02</div>
+                <hr />
+                <div class="circle">03</div>
+                <hr />
+                <div class="circle">04</div>
+              </div>
+              <div class="extra">
+                <div class="part1">Step:</div>
+                <div class="part2">
+                  Our first layer is sequential as there's only a single input. Since it is a picture we need to flatten the RGB content.
+                </div>
+              </div>
+        </div>
+
+        <img
+          src="{{url_for('static', filename='images/how_it_works.png')}}"
+          alt=""
+          srcset=""
+          class="working"
+        />
+      </div>
+    </div>
+    <div class="div4">
+      <div class="subheading">The future of <span>Farming</span> is Us.</div>
+    </div>
+    <script src="{{ url_for('static', filename='chart.js') }}"></script>
+  </body>
+</html>
